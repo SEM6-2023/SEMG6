@@ -16,8 +16,4 @@ jobs:
       - name: Build with Maven
         run: mvn -f semGroup6/pom.xml package
       - name: Run docker compose
-        run: docker-compose up --abort-on-container-exit ./semGroup6
-      - name: Run image
-        run: docker run --name semcontainer -d semimage
-      - name: view logs
-        run: docker logs semcontainer
+        run: docker-compose.yml up --abort-on-container-exit ./semGroup6
