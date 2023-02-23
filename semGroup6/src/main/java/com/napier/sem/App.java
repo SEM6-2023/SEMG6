@@ -49,6 +49,43 @@ public class App
             }
         }
     }
+    public Country getCountry()
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Continent, Region, Population, Capital "
+                            + "FROM world "
+                            + "DESC Population ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return countries if valid.
+            // Check values are returned
+            if (rset.next())
+            {
+                Country cny = new Country();
+                cny.Code = rset.getInt("Code");
+                cny.Name = rset.getString("Name");
+                cny.Continent = rset.getString("Continent");
+                cny.Region  = rset.getString("Region");
+                cny.Population = rset.getInt("Population");
+                cny.Capital = rset.getInt("Capital");
+
+                return cny;
+            }
+            else
+                return null;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get employee details");
+            return null;
+        }
+    }
 
     /**
      * Disconnect from the MySQL database.
