@@ -12,7 +12,7 @@ public class App
     /**
      * Connect to the MySQL database.
      */
-    public void connect()
+    public void connect(String s)
     {
         try
         {
@@ -36,7 +36,7 @@ public class App
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
-                break;
+
             }
             catch (SQLException sqle)
             {
@@ -58,7 +58,7 @@ public class App
             // Create string for SQL statement
             String strSelect =
                     "SELECT Code, Name, Continent, Region, Population, Capital "
-                            + "FROM world "
+                            + "FROM country "
                             + "DESC Population ";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
@@ -82,10 +82,25 @@ public class App
         catch (Exception e)
         {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get employee details");
+            System.out.println("Failed to get country information");
             return null;
         }
     }
+
+    public void displayCountry(Country cny, String s)
+    {
+        if (cny != null)
+        {
+            System.out.println(
+                    cny.Code + " "
+                            + cny.Name + " "
+                            + cny.Continent + " "
+                            + cny.Region + " "
+                            + cny.Population + " "
+                            + cny.Capital + " ");
+        }
+    }
+
 
     /**
      * Disconnect from the MySQL database.
