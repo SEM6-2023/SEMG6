@@ -1,5 +1,5 @@
 
-### Use Cases 01:
+## Use Cases 01:
 
 ### Use-case UC-1
 ### Description
@@ -34,7 +34,7 @@ If in the basic flow the system cannot find the name or the password is  invalid
 The user’s details are stored in the database.
 
 
-### Use-Cases 02:
+## Use-Cases 02:
 
 ### Use-case UC-2
 
@@ -64,7 +64,7 @@ Such as
 The user has access to the system
 
 
-### Use cases 3:
+## Use cases 3:
 
 ### Use-case UC-3
 ### Description
@@ -95,7 +95,7 @@ Actor has logged in
 System displays all details of languages.
 
 
-### Use-case 04:
+## Use-case 04:
 
 ### Use-case UC-4
 ### Description
@@ -126,7 +126,7 @@ Such as
 ### Post- Conditions
 	•	System displays all the information of population.
 
-# Use Case 05:
+## Use Case 05:
 
 ### Use-case UC-5
 ### Description
@@ -154,7 +154,7 @@ Such as
 •	Detail of People living in cities in each region.
 •	Detail of People which are not living in cities in each region.
 
-### Use Case 06:
+## Use Case 06:
 
 ### Use-case UC-6
 ### Description
@@ -183,7 +183,7 @@ Such as
 •	Detail of People which are not living in cities in each Continent.
 
 
-### Use cases 07:
+## Use cases 07:
 
 ### Use-case UC-07
 Description
@@ -215,7 +215,7 @@ System displays all details of top 10 Cities
 
 
 
-### Use cases 08:
+## Use cases 08:
 
 ### Use-case UC-08
 ### Description
@@ -246,7 +246,7 @@ System display all details of top 10 Cities
 
 
 
-### Use cases 09:
+## Use cases 09:
 
 Use-case UC-09
 Description
@@ -275,7 +275,7 @@ Actor has logged in
 
 
 
-### Use Case 10:
+## Use Case 10:
 
 ### Use-case UC-10
 ### Description
