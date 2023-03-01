@@ -8,7 +8,7 @@
 ### ID: UC-1
 
 ### Description
-User tries to sign into system to Access Population Information
+User tries to log into system to Access Population Information
 
 ### Primary Actor
 System Administrator
@@ -18,7 +18,7 @@ Surveyor
 There are no preconditions associated with this
 use case.
 ### Main Success Scenario
-The use case begins when the Surveyors types his/her name and password on the login form.
+The use case begins when the Surveyors type his/her name and password on the login form.
 Basic Flow - Login
 
 1.The system validates the actor’s password and logs him/her into the system.
@@ -73,7 +73,7 @@ Use-case name : Search for people
 ### ID: UC-3
 
 ### Description
-Search for People who speaks Number of languages from greatest number to smallest
+Search for People who speaks Number of languages from greatest number to smallest.
 
 ### Primary Actor
 System Administrator
@@ -235,7 +235,7 @@ Surveyor
 ### Pre-Condition
 Actor has logged in
 
-###Main  Success Scenario
+## Main  Success Scenario
 •	The use case starts when the User clicks  the “Populated Cities”
 •	The system displays the Top 10 populated Cities
 •	Top 10 Cities located in District, Region, Continent and World
