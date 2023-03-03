@@ -14,6 +14,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn -f semGroup6/pom.xml package
+        run: mvn package
       - name: Run docker compose
-        run: docker-compose up -f semGroup6/docker-compose.yml --abort-on-container-exit
+        run: docker-compose up --abort-on-container-exit
