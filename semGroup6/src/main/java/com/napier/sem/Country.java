@@ -8,7 +8,7 @@ public class Country
     /**
      * Country Code
      */
-    public int Code;
+    public String Code;
 
     /**
      * Country name

@@ -4,6 +4,19 @@ import java.sql.*;
 
 public class App
 {
+    public static void main(String[] args) {
+        // Create new Application
+        App a = new App();
+        // Connect to database
+        a.connect();
+        // Get Employee
+        Country cny = a.getCountry();
+        // Display results
+        a.displayCountry(cny);
+        // Disconnect from database
+        a.disconnect();
+    }
+
     /**
      * Connection to MySQL database.
      */
@@ -12,7 +25,7 @@ public class App
     /**
      * Connect to the MySQL database.
      */
-    public void connect(String s)
+    public void connect()
     {
         try
         {
@@ -59,7 +72,7 @@ public class App
             String strSelect =
                     "SELECT Code, Name, Continent, Region, Population, Capital "
                             + "FROM country "
-                            + "DESC Population ";
+                            + "ORDER BY Population DESC ";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return countries if valid.
@@ -67,7 +80,7 @@ public class App
             if (rset.next())
             {
                 Country cny = new Country();
-                cny.Code = rset.getInt("Code");
+                cny.Code = rset.getString("Code");
                 cny.Name = rset.getString("Name");
                 cny.Continent = rset.getString("Continent");
                 cny.Region  = rset.getString("Region");
@@ -87,7 +100,7 @@ public class App
         }
     }
 
-    public void displayCountry(Country cny, String s)
+    public void displayCountry(Country cny)
     {
         if (cny != null)
         {
