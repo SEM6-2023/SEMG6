@@ -14,7 +14,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Unit Tests
-        run: mvn -f semGroup6/src/test/java -Dtest=com.napier.sem.AppTest test
+        run: mvn -f semGroup6/pom.xml -Dtest=com.napier.sem.AppTest test
       - name: Package and Run docker compose
         run: |
           mvn -f semGroup6/pom.xml package -DskipTests
