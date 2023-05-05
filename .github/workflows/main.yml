@@ -38,7 +38,7 @@ jobs:
       - name: Integration Tests
         run: |
           docker build -f semGroup6/pom.xml -t database ./db 
-          docker run -f semGroup6/pom.xml --name country -dp 33060:3306 database
+          docker run -f semGroup6/pom.xml --name cny -dp 33060:3306 database
           mvn -f semGroup6/pom.xml -Dtest=com.napier.sem.AppIntegrationTest test
           docker stop cny
           docker rm cny
